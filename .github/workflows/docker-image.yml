@@ -7,8 +7,6 @@ jobs:
   buildx:
     runs-on: ubuntu-latest
     steps:
-    - run: echo ::set-env name=IMAGE_TAG::${GITHUB_REF:10}
-
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
       with:
@@ -35,5 +33,5 @@ jobs:
     - uses: docker/build-push-action@v2
       with:
         push: true
-        tags: ghcr.io/${{ github.repository_owner }}/alluxio:${{ env.IMAGE_TAG }}
+        tags: ghcr.io/${{ github.repository_owner }}/alluxio:latest
        
