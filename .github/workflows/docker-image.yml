@@ -26,7 +26,7 @@ jobs:
           file: ./Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ outputs.build.tags }}
+          tags: v1
       - 
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
