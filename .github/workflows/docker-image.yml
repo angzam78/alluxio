@@ -13,10 +13,7 @@ jobs:
     runs-on: Ubuntu-20.04
 
     steps:
-    - 
-     uses: docker/setup-qemu-action@v1.0.1
-     with:
-       platforms: amd64, arm64
+
     - 
      name: Build the Docker image     
      uses: actions/checkout@v2
